@@ -4,7 +4,7 @@ public class countPath{
         if(i==m-1||j==n-1){
             return 1;
         }
-        return countingPath(i+1, j, m, n) + countingPath(i, j+1, m, n);
+        return countingPath(i+1, j, m, n)+countingPath(i, j+1, m, n);
     }
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
@@ -12,9 +12,9 @@ public class countPath{
         int m = sc.nextInt();
         System.out.println("Enter you final y posn: ");
         int n = sc.nextInt();
-        System.out.println("Counting distance between ....");
+        System.out.println("Counting different paths ....");
         int d = countingPath(0, 0, m, n);
-        System.out.println(d);
+        System.out.println("Total number of paths is: "+d);
         sc.close();
     }
 }
